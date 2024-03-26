@@ -74,7 +74,7 @@ jobs:
         path: kernel-source/AnyKernel3
 
     - name: Setup KernelSU
-      if: env.USE_KERNELSU == 'true'
+     # if: env.USE_KERNELSU == 'true'
       run: |
             git clone --depth=1 -b ${{ inputs.kernel_tag }} ${{ inputs.git_url }} kernel-source
             git clone https://github.com/tiann/KernelSU kernel-source/KernelSU
