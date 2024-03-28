@@ -6,11 +6,11 @@ on:
       KERNEL_SOURCE:
         description: 'Kernel Source'
         required: true
-        default: 'Death8023/kernel_xiaomi_sm8250_M'
+        default: 'Death8023/kernel_xiaomi_sm8250_D'
       KERNEL_SOURCE_BRANCH:
         description: 'Branch'
         required: true
-        default: 'base'
+        default: 'aries'
       KERNEL_DEFCONFIG:
         description: 'Defconfig'
         required: true
