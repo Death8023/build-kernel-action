@@ -120,7 +120,7 @@ jobs:
       run: |
         cd kernel-source
         KERNEL_NAME=$(grep "CONFIG_LOCALVERSION=" arch/arm64/configs/vendor/xiaomi/sm8250-common.config | cut -d'-' -f2 | tr -d '"')
-        sed -i "s/Art_millet/$KERNEL_NAME/g" ./AnyKernel3/anykernel.sh
+        sed -i "s/~Art_millet/$KERNEL_NAME/g" ./AnyKernel3/anykernel.sh
         cp out/arch/arm64/boot/Image AnyKernel3
         # cp out/arch/arm64/boot/dtbo.img AnyKernel3
         cd AnyKernel3
@@ -129,5 +129,5 @@ jobs:
     - name: Upload Kernel
       uses: actions/upload-artifact@v4
       with:
-        name: Pack-kernel-${{ env.BUILD_TIME }}
+        name: Art_millet-${{ env.BUILD_TIME }}
         path: kernel-source/*.zip
